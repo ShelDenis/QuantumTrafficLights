@@ -173,7 +173,18 @@ def optimize_traffic_with_routes(graph, routes, depth, initial_gamma, initial_be
     init_params = np.concatenate([initial_gamma, initial_beta])
     init_params = np.array(init_params, requires_grad=True)
 
-    opt = qml.GradientDescentOptimizer(stepsize=0.1)
+    # opt = qml.GradientDescentOptimizer(stepsize=0.1)
+    # opt = qml.AdamOptimizer()
+    # Adam справился неплохо - первый маршрут вместо 8 минут, проехал за 7,
+    # но 2-й на минуту больше
+    # opt = qml.AdagradOptimizer()
+    # Adagrad проехал 2-й маршрут так же как и Adam, но 1-й - за 8 минут.
+    # Медленно скатывался в оптимум
+    opt = qml.NesterovMomentumOptimizer()
+    # Нашел самое маленькое значение целевой функции, но результаты как у Adam
+    # Я бы пока оставил его)
+
+
     params = init_params
 
     print("Запуск оптимизации...")
@@ -229,9 +240,12 @@ if __name__ == "__main__":
     routes = define_routes(G)
 
     num_phases = 2
-    depth = 2
-    initial_gamma = [0.5, 0.3]
-    initial_beta = [0.2, 0.4]
+    depth = 4
+    initial_gamma = [0.5, 0.3, 0.2, 0.1]
+    initial_beta = [0.2, 0.4, 0.3, 0.2]
+    # увеличил глубину алгоритма - выполняется дольше,
+    # результат не поменялся (т.к. пример простой),
+    # но для большего числа светофоров - должно быть лучше
 
     phase_offsets, cost, opt_gamma, opt_beta = optimize_traffic_with_routes(
         graph=G,
