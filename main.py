@@ -62,9 +62,11 @@ def build_node_to_qubit_map(graph):
     return node_to_qubit, qubit_to_node, all_nodes
 
 
-def build_cost_hamiltonian_with_routes(G, routes, node_to_qubit):
+def build_cost_hamiltonian_with_routes(G, routes, node_to_qubit, cycle_time=2):
     coeffs = []
     obs = []
+    half_cycle = cycle_time / 2
+    processed_edges = set() # <--- 1. Добавляем множество для учета
 
     for route in routes:
         path = route['path']
@@ -77,7 +79,6 @@ def build_cost_hamiltonian_with_routes(G, routes, node_to_qubit):
 
             if not G.has_edge(light_i, light_j):
                 continue
-
             if light_i not in node_to_qubit or light_j not in node_to_qubit:
                 continue
 
@@ -85,16 +86,36 @@ def build_cost_hamiltonian_with_routes(G, routes, node_to_qubit):
             qj = node_to_qubit[light_j]
 
             travel_time = G[light_i][light_j]['weight']
-            weight = (priority * volume * travel_time) / 1000.0
+            
+            # <--- 2. Используем int() вместо round()
+            # Нас интересует, в какой по счету полупериод прибывает машина
+            half_cycles_int = int(travel_time / half_cycle)
+            
+            base_weight = (priority * volume * travel_time) / 1000.0
+            
+            if half_cycles_int % 2 == 0:
+                # Прибытие на четный такт (0, 2, 4...) -> фазы должны совпадать
+                weight = -base_weight 
+            else:
+                # Прибытие на нечетный такт (1, 3, 5...) -> фазы должны быть противоположны
+                weight = base_weight
+
+            # Записываем ребро в множество (отсортированное, чтобы 1-2 и 2-1 были одним ребром)
+            edge_key = tuple(sorted((light_i, light_j)))
+            processed_edges.add(edge_key)
 
             coeffs.append(weight)
             obs.append(qml.PauliZ(qi) @ qml.PauliZ(qj))
 
+    # Штраф за все остальные дороги
     for u, v in G.edges():
-        qi = node_to_qubit[u]
-        qj = node_to_qubit[v]
-        coeffs.append(0.05)
-        obs.append(qml.PauliZ(qi) @ qml.PauliZ(qj))
+        edge_key = tuple(sorted((u, v)))
+        # <--- 3. Проверяем, не обработали ли мы уже это ребро в маршрутах
+        if edge_key not in processed_edges:
+            qi = node_to_qubit[u]
+            qj = node_to_qubit[v]
+            coeffs.append(-0.05) 
+            obs.append(qml.PauliZ(qi) @ qml.PauliZ(qj))
 
     H = qml.Hamiltonian(coeffs, obs)
     return H
@@ -149,11 +170,13 @@ def optimize_traffic_with_routes(graph, routes, depth, initial_gamma, initial_be
     print(f"Количество маршрутов: {len(routes)}")
     print(f"Глубина QAOA: {depth}\n")
 
-    dev = qml.device("default.qubit", wires=num_qubits, shots=1000)
+        # Используем lightning.qubit - он написан на C++ и быстрее
+    dev = qml.device("lightning.qubit", wires=num_qubits)
 
     H = build_cost_hamiltonian_with_routes(graph, routes, node_to_qubit)
 
-    @qml.qnode(dev)
+    # Добавляем diff_method="adjoint" - это спасет память!
+    @qml.qnode(dev, diff_method="adjoint")
     def qaoa_circuit(gamma, beta):
         for i in range(num_qubits):
             qml.Hadamard(wires=i)
