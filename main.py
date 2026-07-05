@@ -1,7 +1,7 @@
 import pennylane as qml
 from pennylane import numpy as np
 import networkx as nx
-
+from routes_for_quantum import define_routes
 
 def create_traffic_graph_with_routes(filename):
     G = nx.Graph()
@@ -29,28 +29,6 @@ def create_traffic_graph_with_routes(filename):
     print(f"   Вершины: {sorted(G.nodes())}")
 
     return G
-
-
-def define_routes(G):
-    routes = [
-        {
-            'source': 1,  # старт
-            'destination': 4,  # финиш
-            'path': [1, 2, 3, 4],  # Оптимальный путь
-            'priority': 1.0,  # Приоритет маршрута
-            'traffic_volume': 100  # Интенсивность движения (машин/час)
-        },
-        {
-            'source': 1,
-            'destination': 9,
-            'path': [1, 5, 6, 7, 8, 9],
-            'priority': 0.5,
-            'traffic_volume': 50
-        }
-    ]
-
-    return routes
-
 
 def build_node_to_qubit_map(graph):
     all_nodes = sorted(list(graph.nodes()))

@@ -1,0 +1,1026 @@
+{
+  "nodes": {
+    "1": {
+      "id": 1,
+      "lat": 55.044135,
+      "lon": 73.319328
+    },
+    "2": {
+      "id": 2,
+      "lat": 55.045445,
+      "lon": 73.314702
+    },
+    "3": {
+      "id": 3,
+      "lat": 55.042743,
+      "lon": 73.324049
+    },
+    "4": {
+      "id": 4,
+      "lat": 55.040757,
+      "lon": 73.335192
+    },
+    "5": {
+      "id": 5,
+      "lat": 55.048688,
+      "lon": 73.328771
+    },
+    "6": {
+      "id": 6,
+      "lat": 55.046763,
+      "lon": 73.306634
+    },
+    "7": {
+      "id": 7,
+      "lat": 55.047494,
+      "lon": 73.296552
+    },
+    "8": {
+      "id": 8,
+      "lat": 55.051399,
+      "lon": 73.299174
+    },
+    "9": {
+      "id": 9,
+      "lat": 55.052795,
+      "lon": 73.299959
+    },
+    "10": {
+      "id": 10,
+      "lat": 55.042533,
+      "lon": 73.261202
+    },
+    "11": {
+      "id": 11,
+      "lat": 55.038486,
+      "lon": 73.311382
+    },
+    "12": {
+      "id": 12,
+      "lat": 55.036963,
+      "lon": 73.310689
+    },
+    "13": {
+      "id": 13,
+      "lat": 55.01852,
+      "lon": 73.30265
+    },
+    "14": {
+      "id": 14,
+      "lat": 55.037474,
+      "lon": 73.308759
+    },
+    "15": {
+      "id": 15,
+      "lat": 55.037981,
+      "lon": 73.306861
+    },
+    "16": {
+      "id": 16,
+      "lat": 55.039932,
+      "lon": 73.299995
+    },
+    "17": {
+      "id": 17,
+      "lat": 55.041885,
+      "lon": 73.293204
+    },
+    "18": {
+      "id": 18,
+      "lat": 55.036786,
+      "lon": 73.289914
+    },
+    "19": {
+      "id": 19,
+      "lat": 55.035012,
+      "lon": 73.288841
+    },
+    "20": {
+      "id": 20,
+      "lat": 55.032995,
+      "lon": 73.28737
+    },
+    "21": {
+      "id": 21,
+      "lat": 55.029206,
+      "lon": 73.285013
+    },
+    "22": {
+      "id": 22,
+      "lat": 55.026873,
+      "lon": 73.291269
+    },
+    "23": {
+      "id": 23,
+      "lat": 55.025681,
+      "lon": 73.29454
+    },
+    "24": {
+      "id": 24,
+      "lat": 55.024876,
+      "lon": 73.297016
+    },
+    "25": {
+      "id": 25,
+      "lat": 55.023207,
+      "lon": 73.301299
+    },
+    "26": {
+      "id": 26,
+      "lat": 55.041966,
+      "lon": 73.261538
+    },
+    "27": {
+      "id": 27,
+      "lat": 55.038066,
+      "lon": 73.264618
+    },
+    "28": {
+      "id": 28,
+      "lat": 55.042219,
+      "lon": 73.287822
+    },
+    "29": {
+      "id": 29,
+      "lat": 55.042171,
+      "lon": 73.28503
+    },
+    "30": {
+      "id": 30,
+      "lat": 55.042025,
+      "lon": 73.279916
+    },
+    "31": {
+      "id": 31,
+      "lat": 55.034618,
+      "lon": 73.267445
+    },
+    "32": {
+      "id": 32,
+      "lat": 55.032232,
+      "lon": 73.269351
+    },
+    "33": {
+      "id": 33,
+      "lat": 55.029233,
+      "lon": 73.271285
+    },
+    "34": {
+      "id": 34,
+      "lat": 55.028995,
+      "lon": 73.27284
+    },
+    "35": {
+      "id": 35,
+      "lat": 55.029046,
+      "lon": 73.277901
+    },
+    "36": {
+      "id": 36,
+      "lat": 55.020922,
+      "lon": 73.307605
+    },
+    "37": {
+      "id": 37,
+      "lat": 55.006408,
+      "lon": 73.287256
+    },
+    "38": {
+      "id": 38,
+      "lat": 55.01745,
+      "lon": 73.315929
+    },
+    "39": {
+      "id": 39,
+      "lat": 55.01264,
+      "lon": 73.331885
+    },
+    "40": {
+      "id": 40,
+      "lat": 55.031814,
+      "lon": 73.329027
+    },
+    "41": {
+      "id": 41,
+      "lat": 55.029098,
+      "lon": 73.336768
+    },
+    "42": {
+      "id": 42,
+      "lat": 55.021826,
+      "lon": 73.338918
+    },
+    "43": {
+      "id": 43,
+      "lat": 55.017325,
+      "lon": 73.339172
+    },
+    "44": {
+      "id": 44,
+      "lat": 55.033951,
+      "lon": 73.341982
+    }
+  },
+  "edges": [
+    {
+      "edge_id": 1,
+      "start": 1,
+      "end": 2,
+      "midpoint": {
+        "lat": 55.0447,
+        "lon": 73.317372
+      },
+      "road_name": "не указано",
+      "current_travel_time": 751,
+      "free_travel_time": 639,
+      "confidence": 0.999265,
+      "frc": "FRC3",
+      "frc_numeric": 3,
+      "road_closed": false,
+      "osm_type": "secondary",
+      "osm_name": "проспект Менделеева",
+      "osm_importance": 6,
+      "fitness": 35.5
+    },
+    {
+      "edge_id": 2,
+      "start": 1,
+      "end": 3,
+      "midpoint": {
+        "lat": 55.04343,
+        "lon": 73.32171
+      },
+      "road_name": "не указано",
+      "current_travel_time": 791,
+      "free_travel_time": 639,
+      "confidence": 0.999262,
+      "frc": "FRC3",
+      "frc_numeric": 3,
+      "road_closed": false,
+      "osm_type": "secondary",
+      "osm_name": "проспект Менделеева",
+      "osm_importance": 6,
+      "fitness": 35.5
+    },
+    {
+      "edge_id": 3,
+      "start": 3,
+      "end": 4,
+      "midpoint": {
+        "lat": 55.041083,
+        "lon": 73.329226
+      },
+      "road_name": "не указано",
+      "current_travel_time": 791,
+      "free_travel_time": 639,
+      "confidence": 0.999262,
+      "frc": "FRC3",
+      "frc_numeric": 3,
+      "road_closed": false,
+      "osm_type": "secondary",
+      "osm_name": "проспект Менделеева",
+      "osm_importance": 6,
+      "fitness": 35.5
+    },
+    {
+      "edge_id": 4,
+      "start": 4,
+      "end": 5,
+      "midpoint": {
+        "lat": 55.045674,
+        "lon": 73.331239
+      },
+      "road_name": "не указано",
+      "current_travel_time": 791,
+      "free_travel_time": 639,
+      "confidence": 0.999262,
+      "frc": "FRC3",
+      "frc_numeric": 3,
+      "road_closed": false,
+      "osm_type": "secondary",
+      "osm_name": "Красноярский тракт",
+      "osm_importance": 6,
+      "fitness": 71.0
+    },
+    {
+      "edge_id": 5,
+      "start": 3,
+      "end": 5,
+      "midpoint": {
+        "lat": 55.04699,
+        "lon": 73.325998
+      },
+      "road_name": "не указано",
+      "current_travel_time": 791,
+      "free_travel_time": 639,
+      "confidence": 0.999262,
+      "frc": "FRC3",
+      "frc_numeric": 3,
+      "road_closed": false,
+      "osm_type": "tertiary",
+      "osm_name": "улица Бархатовой",
+      "osm_importance": 5,
+      "fitness": 65.0
+    },
+    {
+      "edge_id": 6,
+      "start": 2,
+      "end": 6,
+      "midpoint": {
+        "lat": 55.046171,
+        "lon": 73.310383
+      },
+      "road_name": "не указано",
+      "current_travel_time": 683,
+      "free_travel_time": 613,
+      "confidence": 0.998764,
+      "frc": "FRC4",
+      "frc_numeric": 4,
+      "road_closed": false,
+      "osm_type": "secondary",
+      "osm_name": "проспект Менделеева",
+      "osm_importance": 6,
+      "fitness": 33.0
+    },
+    {
+      "edge_id": 7,
+      "start": 6,
+      "end": 7,
+      "midpoint": {
+        "lat": 55.04713,
+        "lon": 73.301781
+      },
+      "road_name": "не указано",
+      "current_travel_time": 683,
+      "free_travel_time": 613,
+      "confidence": 0.998764,
+      "frc": "FRC4",
+      "frc_numeric": 4,
+      "road_closed": false,
+      "osm_type": "secondary",
+      "osm_name": "проспект Менделеева",
+      "osm_importance": 6,
+      "fitness": 66.0
+    },
+    {
+      "edge_id": 8,
+      "start": 7,
+      "end": 8,
+      "midpoint": {
+        "lat": 55.049668,
+        "lon": 73.298042
+      },
+      "road_name": "не указано",
+      "current_travel_time": 683,
+      "free_travel_time": 613,
+      "confidence": 0.998764,
+      "frc": "FRC4",
+      "frc_numeric": 4,
+      "road_closed": false,
+      "osm_type": "secondary",
+      "osm_name": "улица Химиков",
+      "osm_importance": 6,
+      "fitness": 66.0
+    },
+    {
+      "edge_id": 9,
+      "start": 6,
+      "end": 8,
+      "midpoint": {
+        "lat": 55.049213,
+        "lon": 73.302549
+      },
+      "road_name": "не указано",
+      "current_travel_time": 683,
+      "free_travel_time": 613,
+      "confidence": 0.998764,
+      "frc": "FRC4",
+      "frc_numeric": 4,
+      "road_closed": false,
+      "osm_type": "tertiary",
+      "osm_name": "Светлая улица",
+      "osm_importance": 5,
+      "fitness": 15.0
+    },
+    {
+      "edge_id": 10,
+      "start": 8,
+      "end": 9,
+      "midpoint": {
+        "lat": 55.052096,
+        "lon": 73.299549
+      },
+      "road_name": "не указано",
+      "current_travel_time": 683,
+      "free_travel_time": 613,
+      "confidence": 0.998764,
+      "frc": "FRC4",
+      "frc_numeric": 4,
+      "road_closed": false,
+      "osm_type": "secondary",
+      "osm_name": "улица Химиков",
+      "osm_importance": 6,
+      "fitness": 66.0
+    },
+    {
+      "edge_id": 11,
+      "start": 5,
+      "end": 9,
+      "midpoint": {
+        "lat": 55.052716,
+        "lon": 73.325285
+      },
+      "road_name": "не указано",
+      "current_travel_time": 683,
+      "free_travel_time": 613,
+      "confidence": 0.998764,
+      "frc": "FRC4",
+      "frc_numeric": 4,
+      "road_closed": false,
+      "osm_type": "secondary",
+      "osm_name": "Красноярский тракт",
+      "osm_importance": 6,
+      "fitness": 66.0
+    },
+    {
+      "edge_id": 12,
+      "start": 7,
+      "end": 10,
+      "midpoint": {
+        "lat": 55.047282,
+        "lon": 73.281364
+      },
+      "road_name": "не указано",
+      "current_travel_time": 1432,
+      "free_travel_time": 1432,
+      "confidence": 1,
+      "frc": "FRC3",
+      "frc_numeric": 3,
+      "road_closed": false,
+      "osm_type": "secondary",
+      "osm_name": "улица Энтузиастов",
+      "osm_importance": 6,
+      "fitness": 35.5
+    },
+    {
+      "edge_id": 13,
+      "start": 2,
+      "end": 11,
+      "midpoint": {
+        "lat": 55.041955,
+        "lon": 73.312849
+      },
+      "road_name": "не указано",
+      "current_travel_time": 683,
+      "free_travel_time": 613,
+      "confidence": 0.998526,
+      "frc": "FRC4",
+      "frc_numeric": 4,
+      "road_closed": false,
+      "osm_type": "secondary",
+      "osm_name": "Заозёрная улица",
+      "osm_importance": 6,
+      "fitness": 49.5
+    },
+    {
+      "edge_id": 14,
+      "start": 11,
+      "end": 12,
+      "midpoint": {
+        "lat": 55.037893,
+        "lon": 73.311114
+      },
+      "road_name": "не указано",
+      "current_travel_time": 683,
+      "free_travel_time": 613,
+      "confidence": 0.998526,
+      "frc": "FRC4",
+      "frc_numeric": 4,
+      "road_closed": false,
+      "osm_type": "secondary",
+      "osm_name": "Заозёрная улица",
+      "osm_importance": 6,
+      "fitness": 49.5
+    },
+    {
+      "edge_id": 15,
+      "start": 12,
+      "end": 13,
+      "midpoint": {
+        "lat": 55.025753,
+        "lon": 73.305645
+      },
+      "road_name": "не указано",
+      "current_travel_time": 683,
+      "free_travel_time": 613,
+      "confidence": 0.998526,
+      "frc": "FRC4",
+      "frc_numeric": 4,
+      "road_closed": false,
+      "osm_type": "secondary",
+      "osm_name": "Заозёрная улица",
+      "osm_importance": 6,
+      "fitness": 49.5
+    },
+    {
+      "edge_id": 16,
+      "start": 12,
+      "end": 14,
+      "midpoint": {
+        "lat": 55.037212,
+        "lon": 73.309673
+      },
+      "road_name": "не указано",
+      "current_travel_time": 683,
+      "free_travel_time": 613,
+      "confidence": 0.998526,
+      "frc": "FRC4",
+      "frc_numeric": 4,
+      "road_closed": false,
+      "osm_type": "secondary",
+      "osm_name": "проспект Королёва",
+      "osm_importance": 6,
+      "fitness": 66.0
+    },
+    {
+      "edge_id": 17,
+      "start": 14,
+      "end": 15,
+      "midpoint": {
+        "lat": 55.037725,
+        "lon": 73.30783
+      },
+      "road_name": "не указано",
+      "current_travel_time": 683,
+      "free_travel_time": 613,
+      "confidence": 0.998526,
+      "frc": "FRC4",
+      "frc_numeric": 4,
+      "road_closed": false,
+      "osm_type": "secondary",
+      "osm_name": "проспект Королёва",
+      "osm_importance": 6,
+      "fitness": 66.0
+    },
+    {
+      "edge_id": 18,
+      "start": 15,
+      "end": 16,
+      "midpoint": {
+        "lat": 55.038716,
+        "lon": 73.304171
+      },
+      "road_name": "не указано",
+      "current_travel_time": 699,
+      "free_travel_time": 613,
+      "confidence": 0.998526,
+      "frc": "FRC4",
+      "frc_numeric": 4,
+      "road_closed": false,
+      "osm_type": "secondary",
+      "osm_name": "проспект Королёва",
+      "osm_importance": 6,
+      "fitness": 66.0
+    },
+    {
+      "edge_id": 19,
+      "start": 16,
+      "end": 17,
+      "midpoint": {
+        "lat": 55.040683,
+        "lon": 73.297307
+      },
+      "road_name": "не указано",
+      "current_travel_time": 699,
+      "free_travel_time": 613,
+      "confidence": 0.998526,
+      "frc": "FRC4",
+      "frc_numeric": 4,
+      "road_closed": false,
+      "osm_type": "secondary",
+      "osm_name": "проспект Королёва",
+      "osm_importance": 6,
+      "fitness": 66.0
+    },
+    {
+      "edge_id": 20,
+      "start": 6,
+      "end": 17,
+      "midpoint": {
+        "lat": 55.044392,
+        "lon": 73.294693
+      },
+      "road_name": "не указано",
+      "current_travel_time": 699,
+      "free_travel_time": 613,
+      "confidence": 0.998526,
+      "frc": "FRC4",
+      "frc_numeric": 4,
+      "road_closed": false,
+      "osm_type": "secondary",
+      "osm_name": "улица Химиков",
+      "osm_importance": 6,
+      "fitness": 66.0
+    },
+    {
+      "edge_id": 21,
+      "start": 17,
+      "end": 18,
+      "midpoint": {
+        "lat": 55.039363,
+        "lon": 73.291585
+      },
+      "road_name": "не указано",
+      "current_travel_time": 699,
+      "free_travel_time": 613,
+      "confidence": 0.998526,
+      "frc": "FRC4",
+      "frc_numeric": 4,
+      "road_closed": false,
+      "osm_type": "secondary",
+      "osm_name": "улица Химиков",
+      "osm_importance": 6,
+      "fitness": 33.0
+    },
+    {
+      "edge_id": 22,
+      "start": 14,
+      "end": 18,
+      "midpoint": {
+        "lat": 55.03221,
+        "lon": 73.303365
+      },
+      "road_name": "не указано",
+      "current_travel_time": 715,
+      "free_travel_time": 613,
+      "confidence": 0.997624,
+      "frc": "FRC4",
+      "frc_numeric": 4,
+      "road_closed": false,
+      "osm_type": "tertiary",
+      "osm_name": "улица Волкова",
+      "osm_importance": 5,
+      "fitness": 30.0
+    },
+    {
+      "edge_id": 23,
+      "start": 18,
+      "end": 19,
+      "midpoint": {
+        "lat": 55.035813,
+        "lon": 73.289289
+      },
+      "road_name": "не указано",
+      "current_travel_time": 715,
+      "free_travel_time": 613,
+      "confidence": 0.997624,
+      "frc": "FRC4",
+      "frc_numeric": 4,
+      "road_closed": false,
+      "osm_type": "secondary",
+      "osm_name": "улица Химиков",
+      "osm_importance": 6,
+      "fitness": 33.0
+    },
+    {
+      "edge_id": 24,
+      "start": 19,
+      "end": 20,
+      "midpoint": {
+        "lat": 55.034036,
+        "lon": 73.288162
+      },
+      "road_name": "не указано",
+      "current_travel_time": 715,
+      "free_travel_time": 613,
+      "confidence": 0.997624,
+      "frc": "FRC4",
+      "frc_numeric": 4,
+      "road_closed": false,
+      "osm_type": "secondary",
+      "osm_name": "улица Химиков",
+      "osm_importance": 6,
+      "fitness": 33.0
+    },
+    {
+      "edge_id": 25,
+      "start": 20,
+      "end": 21,
+      "midpoint": {
+        "lat": 55.030576,
+        "lon": 73.285948
+      },
+      "road_name": "не указано",
+      "current_travel_time": 1432,
+      "free_travel_time": 1432,
+      "confidence": 1,
+      "frc": "FRC3",
+      "frc_numeric": 3,
+      "road_closed": false,
+      "osm_type": "secondary",
+      "osm_name": "улица Химиков",
+      "osm_importance": 6,
+      "fitness": 35.5
+    },
+    {
+      "edge_id": 26,
+      "start": 21,
+      "end": 22,
+      "midpoint": {
+        "lat": 55.027775,
+        "lon": 73.289003
+      },
+      "road_name": "не указано",
+      "current_travel_time": 1432,
+      "free_travel_time": 1432,
+      "confidence": 1,
+      "frc": "FRC3",
+      "frc_numeric": 3,
+      "road_closed": false,
+      "osm_type": "secondary",
+      "osm_name": "проспект Мира",
+      "osm_importance": 6,
+      "fitness": 53.25
+    },
+    {
+      "edge_id": 27,
+      "start": 22,
+      "end": 23,
+      "midpoint": {
+        "lat": 55.026272,
+        "lon": 73.29294
+      },
+      "road_name": "не указано",
+      "current_travel_time": 1487,
+      "free_travel_time": 1487,
+      "confidence": 1,
+      "frc": "FRC4",
+      "frc_numeric": 4,
+      "road_closed": false,
+      "osm_type": "secondary",
+      "osm_name": "проспект Мира",
+      "osm_importance": 6,
+      "fitness": 49.5
+    },
+    {
+      "edge_id": 28,
+      "start": 23,
+      "end": 24,
+      "midpoint": {
+        "lat": 55.02382,
+        "lon": 73.2995
+      },
+      "road_name": "не указано",
+      "current_travel_time": 1487,
+      "free_travel_time": 1487,
+      "confidence": 1,
+      "frc": "FRC4",
+      "frc_numeric": 4,
+      "road_closed": false,
+      "osm_type": "secondary",
+      "osm_name": "проспект Мира",
+      "osm_importance": 6,
+      "fitness": 49.5
+    },
+    {
+      "edge_id": 29,
+      "start": 24,
+      "end": 25,
+      "midpoint": {
+        "lat": 55.023744,
+        "lon": 73.299679
+      },
+      "road_name": "не указано",
+      "current_travel_time": 1487,
+      "free_travel_time": 1487,
+      "confidence": 1,
+      "frc": "FRC4",
+      "frc_numeric": 4,
+      "road_closed": false,
+      "osm_type": "secondary",
+      "osm_name": "проспект Мира",
+      "osm_importance": 6,
+      "fitness": 49.5
+    },
+    {
+      "edge_id": 30,
+      "start": 25,
+      "end": 13,
+      "midpoint": {
+        "lat": 55.022169,
+        "lon": 73.303481
+      },
+      "road_name": "не указано",
+      "current_travel_time": 29,
+      "free_travel_time": 22,
+      "confidence": 1,
+      "frc": "FRC4",
+      "frc_numeric": 4,
+      "road_closed": false,
+      "osm_type": "primary",
+      "osm_name": "проспект Мира",
+      "osm_importance": 8,
+      "fitness": 78.0
+    },
+    {
+      "edge_id": 31,
+      "start": 5,
+      "end": 2,
+      "midpoint": {
+        "lat": 55.051304,
+        "lon": 73.317234
+      },
+      "road_name": "не указано",
+      "current_travel_time": 653,
+      "free_travel_time": 653,
+      "confidence": 1,
+      "frc": "FRC3",
+      "frc_numeric": 3,
+      "road_closed": false,
+      "osm_type": "secondary",
+      "osm_name": "Заозёрная улица",
+      "osm_importance": 6,
+      "fitness": 53.25
+    },
+    {
+      "edge_id": 32,
+      "start": 10,
+      "end": 26,
+      "midpoint": {
+        "lat": 55.042205,
+        "lon": 73.261245
+      },
+      "road_name": "не указано",
+      "current_travel_time": 715,
+      "free_travel_time": 613,
+      "confidence": 0.998526,
+      "frc": "FRC4",
+      "frc_numeric": 4,
+      "road_closed": false,
+      "osm_type": "secondary",
+      "osm_name": "улица Энтузиастов",
+      "osm_importance": 6,
+      "fitness": 33.0
+    },
+    {
+      "edge_id": 33,
+      "start": 26,
+      "end": 27,
+      "midpoint": {
+        "lat": 55.039696,
+        "lon": 73.263255
+      },
+      "road_name": "не указано",
+      "current_travel_time": 1432,
+      "free_travel_time": 1432,
+      "confidence": 1,
+      "frc": "FRC3",
+      "frc_numeric": 3,
+      "road_closed": false,
+      "osm_type": "secondary",
+      "osm_name": "Нефтезаводская улица",
+      "osm_importance": 6,
+      "fitness": 53.25
+    },
+    {
+      "edge_id": 34,
+      "start": 17,
+      "end": 28,
+      "midpoint": {
+        "lat": 55.042211,
+        "lon": 73.290082
+      },
+      "road_name": "не указано",
+      "current_travel_time": 699,
+      "free_travel_time": 626,
+      "confidence": 0.998526,
+      "frc": "FRC4",
+      "frc_numeric": 4,
+      "road_closed": false,
+      "osm_type": "secondary",
+      "osm_name": "улица 22 Апреля",
+      "osm_importance": 6,
+      "fitness": 66.0
+    },
+    {
+      "edge_id": 35,
+      "start": 28,
+      "end": 29,
+      "midpoint": {
+        "lat": 55.042192,
+        "lon": 73.287223
+      },
+      "road_name": "не указано",
+      "current_travel_time": 699,
+      "free_travel_time": 626,
+      "confidence": 0.998526,
+      "frc": "FRC4",
+      "frc_numeric": 4,
+      "road_closed": false,
+      "osm_type": "secondary",
+      "osm_name": "улица 22 Апреля",
+      "osm_importance": 6,
+      "fitness": 66.0
+    },
+    {
+      "edge_id": 36,
+      "start": 29,
+      "end": 30,
+      "midpoint": {
+        "lat": 55.042113,
+        "lon": 73.282202
+      },
+      "road_name": "не указано",
+      "current_travel_time": 1432,
+      "free_travel_time": 1432,
+      "confidence": 1,
+      "frc": "FRC3",
+      "frc_numeric": 3,
+      "road_closed": false,
+      "osm_type": "secondary",
+      "osm_name": "улица 22 Апреля",
+      "osm_importance": 6,
+      "fitness": 71.0
+    },
+    {
+      "edge_id": 37,
+      "start": 30,
+      "end": 27,
+      "midpoint": {
+        "lat": 55.039186,
+        "lon": 73.269258
+      },
+      "road_name": "не указано",
+      "current_travel_time": 1432,
+      "free_travel_time": 1432,
+      "confidence": 1,
+      "frc": "FRC3",
+      "frc_numeric": 3,
+      "road_closed": false,
+      "osm_type": "secondary",
+      "osm_name": "улица 22 Апреля",
+      "osm_importance": 6,
+      "fitness": 71.0
+    },
+    {
+      "edge_id": 38,
+      "start": 27,
+      "end": 31,
+      "midpoint": {
+        "lat": 55.036255,
+        "lon": 73.266075
+      },
+      "road_name": "не указано",
+      "current_travel_time": 1432,
+      "free_travel_time": 1432,
+      "confidence": 1,
+      "frc": "FRC3",
+      "frc_numeric": 3,
+      "road_closed": false,
+      "osm_type": "secondary",
+      "osm_name": "Нефтезаводская улица",
+      "osm_importance": 6,
+      "fitness": 53.25
+    },
+    {
+      "edge_id": 39,
+      "start": 18,
+      "end": 31,
+      "midpoint": {
+        "lat": 55.036671,
+        "lon": 73.278371
+      },
+      "road_name": "не указано",
+      "current_travel_time": 1432,
+      "free_travel_time": 1432,
+      "confidence": 1,
+      "frc": "FRC3",
+      "frc_numeric": 3,
+      "road_closed": false,
+      "osm_type": "residential",
+      "osm_name": "Магистральная улица",
+      "osm_importance": 2,
+      "fitness": 22.5
+    },
+    {
+      "edge_id": 40,
+      "start": 31,
+      "end": 32,
+      "midpoint": {
+        "lat": 55.032884,
+        "lon": 73.268869
+      },
+      "road_name": "не указано",
+      "current_travel_time": 1432,
+      "free_travel_time": 1432,
+      "confidence": 1,
+      "frc": "FRC3",
+      "frc_numeric": 3,
+      "road_closed": false,
+      "osm_type": "secondary",
+      "osm_name": "Нефтезаводская улица",
+      "osm_importance": 6,
+      "fitness": 53.25
+    }
+  ]
+}
