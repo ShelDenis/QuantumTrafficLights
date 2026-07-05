@@ -5,7 +5,7 @@ from datetime import datetime, timedelta
 import re
 
 # Ваш API ключ TomTom
-API_KEY = "cGilwBtEvs2J3QV2mMmaLOeuQ5KTn2Ti"
+API_KEY = ""
 
 # Настройки задержек для API
 TOMTOM_DELAY = 0.3  # секунды между запросами к TomTom
@@ -326,7 +326,6 @@ for idx, row in enumerate(raw_data, 1):
         fitness_data = calculate_improved_fitness(tomtom_data, osm_info)
 
         print(f"  Фитнес: {fitness_data['normalized_fitness']} ")
-        print(f"  Фитнес: {fitness_data['normalized_fitness']} ")
 
         edge = {
             "edge_id": idx,
@@ -344,6 +343,8 @@ for idx, row in enumerate(raw_data, 1):
             "osm_name": osm_info['name'] if osm_info else None,
             "osm_importance": osm_info['importance'] if osm_info else None,
             "fitness": fitness_data['normalized_fitness'],
+            "current_speed": data["currentSpeed"],
+            "free_speed": data["freeFlowSpeed"],
         }
 
         edges.append(edge)
