@@ -336,6 +336,12 @@ if __name__ == "__main__":
 
     selected_paths = select_optimal_routes_evolutionary(diverse_paths, n_routes=5, max_vertices=12)
 
+    edge_id_map = {}
+    for edge in edges:
+        u, v = edge['start'], edge['end']
+        edge_id_map[(u, v)] = edge.get('edge_id', f'edge_{u}_{v}')
+        edge_id_map[(v, u)] = edge.get('edge_id', f'edge_{u}_{v}')
+
     routes = []
     for path in selected_paths:
         total_fitness = sum(edge_weights.get((path[i], path[i + 1]), 50)
@@ -364,6 +370,15 @@ if __name__ == "__main__":
         print(f"  Длина: {len(route['path'])} вершин")
         print(f"  Приоритет: {route['priority']}")
         print(f"  Интенсивность: {route['traffic_volume']}")
+
+        print(f"  Рёбра:")
+        for j in range(len(route['path']) - 1):
+            u = route['path'][j]
+            v = route['path'][j + 1]
+            eid = edge_id_map.get((u, v), f'?')
+            fitness = edge_weights.get((u, v), '?')
+            print(f"    edge {eid}: ({u}, {v}) [fitness={fitness}]")
+
         unique_vertices.update(route['path'])
 
     print(f"\nУникальные вершины: {len(unique_vertices)}")

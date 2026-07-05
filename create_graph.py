@@ -5,7 +5,7 @@ from datetime import datetime, timedelta
 import re
 
 # Ваш API ключ TomTom
-API_KEY = ""
+API_KEY = "cGilwBtEvs2J3QV2mMmaLOeuQ5KTn2Ti"
 
 # Настройки задержек для API
 TOMTOM_DELAY = 0.3  # секунды между запросами к TomTom
@@ -222,7 +222,7 @@ raw_data = [
     [17, 55.037474, 73.308759, 55.037981, 73.306861, 55.037725, 73.307830],
     [18, 55.037981, 73.306861, 55.039932, 73.299995, 55.038716, 73.304171],
     [19, 55.039932, 73.299995, 55.041885, 73.293204, 55.040683, 73.297307],
-    [20, 55.046763, 73.306634, 55.041885, 73.293204, 55.044392, 73.294693],
+    [20, 55.047494, 73.296552, 55.041885, 73.293204, 55.044392, 73.294693],
     [21, 55.041885, 73.293204, 55.036786, 73.289914, 55.039363, 73.291585],
     [22, 55.037474, 73.308759, 55.036786, 73.289914, 55.032210, 73.303365],
     [23, 55.036786, 73.289914, 55.035012, 73.288841, 55.035813, 73.289289],
@@ -289,7 +289,7 @@ for idx, row in enumerate(raw_data, 1):
     light_u = light_coords[coord1]
     light_v = light_coords[coord2]
 
-    print(f"\n[{idx}/{len(raw_data)}] Обработка ребра {light_u}→{light_v}")
+    print(f"\n[{idx}/{len(raw_data)}] Обработка ребра {light_u}->{light_v}")
 
     cache_key = (round(mid_lat, 4), round(mid_lon, 4))
     if cache_key not in osm_cache:
@@ -318,7 +318,7 @@ for idx, row in enumerate(raw_data, 1):
         frc_parsed = parse_frc(frc_raw)
 
         print(f"  Дорога: {road_name}")
-        print(f"  FRC: {frc_raw} → {frc_parsed}")
+        print(f"  FRC: {frc_raw} -> {frc_parsed}")
 
         tomtom_data = dict(data)
         tomtom_data['frc'] = frc_parsed
@@ -396,6 +396,6 @@ print(f"  Мин: {min(fitnesses):.3f}")
 
 sorted_edges = sorted(edges, key=lambda x: x["fitness"], reverse=True)
 for i, edge in enumerate(sorted_edges[:5], 1):
-    print(f"  {i}. {edge['start']}→{edge['end']} "
+    print(f"  {i}. {edge['start']}->{edge['end']} "
           f"[{edge['osm_type'] or '?'}] "
           f"фитнес: {edge['fitness']:.3f}")

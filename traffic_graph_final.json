@@ -231,9 +231,9 @@
         "lon": 73.317372
       },
       "road_name": "не указано",
-      "current_travel_time": 791,
-      "free_travel_time": 613,
-      "confidence": 0.998928,
+      "current_travel_time": 812,
+      "free_travel_time": 626,
+      "confidence": 0.997465,
       "frc": "FRC3",
       "frc_numeric": 3,
       "road_closed": false,
@@ -241,8 +241,8 @@
       "osm_name": "проспект Менделеева",
       "osm_importance": 6,
       "fitness": 35.5,
-      "current_speed": 38,
-      "free_speed": 49
+      "current_speed": 37,
+      "free_speed": 48
     },
     {
       "edge_id": 2,
@@ -253,9 +253,9 @@
         "lon": 73.32171
       },
       "road_name": "не указано",
-      "current_travel_time": 791,
-      "free_travel_time": 613,
-      "confidence": 0.998928,
+      "current_travel_time": 812,
+      "free_travel_time": 626,
+      "confidence": 0.997465,
       "frc": "FRC3",
       "frc_numeric": 3,
       "road_closed": false,
@@ -263,8 +263,8 @@
       "osm_name": "проспект Менделеева",
       "osm_importance": 6,
       "fitness": 35.5,
-      "current_speed": 38,
-      "free_speed": 49
+      "current_speed": 37,
+      "free_speed": 48
     },
     {
       "edge_id": 3,
@@ -275,9 +275,9 @@
         "lon": 73.329226
       },
       "road_name": "не указано",
-      "current_travel_time": 791,
-      "free_travel_time": 613,
-      "confidence": 0.998928,
+      "current_travel_time": 835,
+      "free_travel_time": 639,
+      "confidence": 0.997472,
       "frc": "FRC3",
       "frc_numeric": 3,
       "road_closed": false,
@@ -285,8 +285,8 @@
       "osm_name": "проспект Менделеева",
       "osm_importance": 6,
       "fitness": 35.5,
-      "current_speed": 38,
-      "free_speed": 49
+      "current_speed": 36,
+      "free_speed": 47
     },
     {
       "edge_id": 4,
@@ -297,9 +297,9 @@
         "lon": 73.331239
       },
       "road_name": "не указано",
-      "current_travel_time": 812,
+      "current_travel_time": 835,
       "free_travel_time": 639,
-      "confidence": 0.998931,
+      "confidence": 0.997472,
       "frc": "FRC3",
       "frc_numeric": 3,
       "road_closed": false,
@@ -307,7 +307,7 @@
       "osm_name": "Красноярский тракт",
       "osm_importance": 6,
       "fitness": 71.0,
-      "current_speed": 37,
+      "current_speed": 36,
       "free_speed": 47
     },
     {
@@ -319,9 +319,9 @@
         "lon": 73.325998
       },
       "road_name": "не указано",
-      "current_travel_time": 770,
-      "free_travel_time": 639,
-      "confidence": 0.998932,
+      "current_travel_time": 812,
+      "free_travel_time": 613,
+      "confidence": 0.997073,
       "frc": "FRC3",
       "frc_numeric": 3,
       "road_closed": false,
@@ -329,8 +329,8 @@
       "osm_name": "улица Бархатовой",
       "osm_importance": 5,
       "fitness": 65.0,
-      "current_speed": 39,
-      "free_speed": 47
+      "current_speed": 37,
+      "free_speed": 49
     },
     {
       "edge_id": 6,
@@ -473,9 +473,9 @@
         "lon": 73.281364
       },
       "road_name": "не указано",
-      "current_travel_time": 1432,
-      "free_travel_time": 1432,
-      "confidence": 1,
+      "current_travel_time": 1607,
+      "free_travel_time": 1401,
+      "confidence": 0.836531,
       "frc": "FRC3",
       "frc_numeric": 3,
       "road_closed": false,
@@ -483,8 +483,8 @@
       "osm_name": "улица Энтузиастов",
       "osm_importance": 6,
       "fitness": 35.5,
-      "current_speed": 46,
-      "free_speed": 46
+      "current_speed": 41,
+      "free_speed": 47
     },
     {
       "edge_id": 13,
@@ -561,9 +561,9 @@
         "lon": 73.309673
       },
       "road_name": "не указано",
-      "current_travel_time": 715,
+      "current_travel_time": 639,
       "free_travel_time": 639,
-      "confidence": 0.999098,
+      "confidence": 1,
       "frc": "FRC4",
       "frc_numeric": 4,
       "road_closed": false,
@@ -571,7 +571,7 @@
       "osm_name": "проспект Королёва",
       "osm_importance": 6,
       "fitness": 66.0,
-      "current_speed": 42,
+      "current_speed": 47,
       "free_speed": 47
     },
     {
@@ -583,9 +583,9 @@
         "lon": 73.30783
       },
       "road_name": "не указано",
-      "current_travel_time": 715,
+      "current_travel_time": 639,
       "free_travel_time": 639,
-      "confidence": 0.999098,
+      "confidence": 1,
       "frc": "FRC4",
       "frc_numeric": 4,
       "road_closed": false,
@@ -593,7 +593,7 @@
       "osm_name": "проспект Королёва",
       "osm_importance": 6,
       "fitness": 66.0,
-      "current_speed": 42,
+      "current_speed": 47,
       "free_speed": 47
     },
     {
@@ -605,9 +605,9 @@
         "lon": 73.304171
       },
       "road_name": "не указано",
-      "current_travel_time": 715,
+      "current_travel_time": 639,
       "free_travel_time": 639,
-      "confidence": 0.999098,
+      "confidence": 1,
       "frc": "FRC4",
       "frc_numeric": 4,
       "road_closed": false,
@@ -615,7 +615,7 @@
       "osm_name": "проспект Королёва",
       "osm_importance": 6,
       "fitness": 66.0,
-      "current_speed": 42,
+      "current_speed": 47,
       "free_speed": 47
     },
     {
@@ -627,9 +627,9 @@
         "lon": 73.297307
       },
       "road_name": "не указано",
-      "current_travel_time": 715,
+      "current_travel_time": 639,
       "free_travel_time": 639,
-      "confidence": 0.999098,
+      "confidence": 1,
       "frc": "FRC4",
       "frc_numeric": 4,
       "road_closed": false,
@@ -637,21 +637,21 @@
       "osm_name": "проспект Королёва",
       "osm_importance": 6,
       "fitness": 66.0,
-      "current_speed": 42,
+      "current_speed": 47,
       "free_speed": 47
     },
     {
       "edge_id": 20,
-      "start": 6,
+      "start": 7,
       "end": 17,
       "midpoint": {
         "lat": 55.044392,
         "lon": 73.294693
       },
       "road_name": "не указано",
-      "current_travel_time": 715,
+      "current_travel_time": 639,
       "free_travel_time": 639,
-      "confidence": 0.999098,
+      "confidence": 1,
       "frc": "FRC4",
       "frc_numeric": 4,
       "road_closed": false,
@@ -659,7 +659,7 @@
       "osm_name": "улица Химиков",
       "osm_importance": 6,
       "fitness": 66.0,
-      "current_speed": 42,
+      "current_speed": 47,
       "free_speed": 47
     },
     {
@@ -671,9 +671,9 @@
         "lon": 73.291585
       },
       "road_name": "не указано",
-      "current_travel_time": 715,
+      "current_travel_time": 639,
       "free_travel_time": 639,
-      "confidence": 0.999098,
+      "confidence": 1,
       "frc": "FRC4",
       "frc_numeric": 4,
       "road_closed": false,
@@ -681,7 +681,7 @@
       "osm_name": "улица Химиков",
       "osm_importance": 6,
       "fitness": 33.0,
-      "current_speed": 42,
+      "current_speed": 47,
       "free_speed": 47
     },
     {
@@ -737,9 +737,9 @@
         "lon": 73.288162
       },
       "road_name": "не указано",
-      "current_travel_time": 715,
-      "free_travel_time": 626,
-      "confidence": 0.998764,
+      "current_travel_time": 639,
+      "free_travel_time": 639,
+      "confidence": 1,
       "frc": "FRC4",
       "frc_numeric": 4,
       "road_closed": false,
@@ -747,8 +747,8 @@
       "osm_name": "улица Химиков",
       "osm_importance": 6,
       "fitness": 33.0,
-      "current_speed": 42,
-      "free_speed": 48
+      "current_speed": 47,
+      "free_speed": 47
     },
     {
       "edge_id": 25,
@@ -759,9 +759,9 @@
         "lon": 73.285948
       },
       "road_name": "не указано",
-      "current_travel_time": 1432,
-      "free_travel_time": 1432,
-      "confidence": 1,
+      "current_travel_time": 1568,
+      "free_travel_time": 1401,
+      "confidence": 0.881969,
       "frc": "FRC3",
       "frc_numeric": 3,
       "road_closed": false,
@@ -769,8 +769,8 @@
       "osm_name": "улица Химиков",
       "osm_importance": 6,
       "fitness": 35.5,
-      "current_speed": 46,
-      "free_speed": 46
+      "current_speed": 42,
+      "free_speed": 47
     },
     {
       "edge_id": 26,
@@ -781,9 +781,9 @@
         "lon": 73.289003
       },
       "road_name": "не указано",
-      "current_travel_time": 1432,
-      "free_travel_time": 1432,
-      "confidence": 1,
+      "current_travel_time": 1568,
+      "free_travel_time": 1401,
+      "confidence": 0.881969,
       "frc": "FRC3",
       "frc_numeric": 3,
       "road_closed": false,
@@ -791,8 +791,8 @@
       "osm_name": "проспект Мира",
       "osm_importance": 6,
       "fitness": 53.25,
-      "current_speed": 46,
-      "free_speed": 46
+      "current_speed": 42,
+      "free_speed": 47
     },
     {
       "edge_id": 27,
@@ -891,9 +891,9 @@
         "lon": 73.317234
       },
       "road_name": "не указано",
-      "current_travel_time": 770,
-      "free_travel_time": 639,
-      "confidence": 0.998933,
+      "current_travel_time": 751,
+      "free_travel_time": 613,
+      "confidence": 0.996,
       "frc": "FRC3",
       "frc_numeric": 3,
       "road_closed": false,
@@ -901,8 +901,8 @@
       "osm_name": "Заозёрная улица",
       "osm_importance": 6,
       "fitness": 53.25,
-      "current_speed": 39,
-      "free_speed": 47
+      "current_speed": 40,
+      "free_speed": 49
     },
     {
       "edge_id": 32,
@@ -935,9 +935,9 @@
         "lon": 73.263255
       },
       "road_name": "не указано",
-      "current_travel_time": 1432,
-      "free_travel_time": 1432,
-      "confidence": 1,
+      "current_travel_time": 1568,
+      "free_travel_time": 1401,
+      "confidence": 0.880783,
       "frc": "FRC3",
       "frc_numeric": 3,
       "road_closed": false,
@@ -945,8 +945,8 @@
       "osm_name": "Нефтезаводская улица",
       "osm_importance": 6,
       "fitness": 53.25,
-      "current_speed": 46,
-      "free_speed": 46
+      "current_speed": 42,
+      "free_speed": 47
     },
     {
       "edge_id": 34,
@@ -1001,9 +1001,9 @@
         "lon": 73.282202
       },
       "road_name": "не указано",
-      "current_travel_time": 1432,
-      "free_travel_time": 1432,
-      "confidence": 1,
+      "current_travel_time": 1568,
+      "free_travel_time": 1401,
+      "confidence": 0.883918,
       "frc": "FRC3",
       "frc_numeric": 3,
       "road_closed": false,
@@ -1011,8 +1011,8 @@
       "osm_name": "улица 22 Апреля",
       "osm_importance": 6,
       "fitness": 71.0,
-      "current_speed": 46,
-      "free_speed": 46
+      "current_speed": 42,
+      "free_speed": 47
     },
     {
       "edge_id": 37,
@@ -1023,9 +1023,9 @@
         "lon": 73.269258
       },
       "road_name": "не указано",
-      "current_travel_time": 1432,
-      "free_travel_time": 1432,
-      "confidence": 1,
+      "current_travel_time": 1568,
+      "free_travel_time": 1401,
+      "confidence": 0.897721,
       "frc": "FRC3",
       "frc_numeric": 3,
       "road_closed": false,
@@ -1033,8 +1033,8 @@
       "osm_name": "улица 22 Апреля",
       "osm_importance": 6,
       "fitness": 71.0,
-      "current_speed": 46,
-      "free_speed": 46
+      "current_speed": 42,
+      "free_speed": 47
     },
     {
       "edge_id": 38,
@@ -1045,9 +1045,9 @@
         "lon": 73.266075
       },
       "road_name": "не указано",
-      "current_travel_time": 1432,
-      "free_travel_time": 1432,
-      "confidence": 1,
+      "current_travel_time": 1568,
+      "free_travel_time": 1401,
+      "confidence": 0.897735,
       "frc": "FRC3",
       "frc_numeric": 3,
       "road_closed": false,
@@ -1055,8 +1055,8 @@
       "osm_name": "Нефтезаводская улица",
       "osm_importance": 6,
       "fitness": 53.25,
-      "current_speed": 46,
-      "free_speed": 46
+      "current_speed": 42,
+      "free_speed": 47
     },
     {
       "edge_id": 39,
@@ -1067,9 +1067,9 @@
         "lon": 73.278371
       },
       "road_name": "не указано",
-      "current_travel_time": 1432,
-      "free_travel_time": 1432,
-      "confidence": 1,
+      "current_travel_time": 1568,
+      "free_travel_time": 1401,
+      "confidence": 0.897735,
       "frc": "FRC3",
       "frc_numeric": 3,
       "road_closed": false,
@@ -1077,8 +1077,8 @@
       "osm_name": "Магистральная улица",
       "osm_importance": 2,
       "fitness": 22.5,
-      "current_speed": 46,
-      "free_speed": 46
+      "current_speed": 42,
+      "free_speed": 47
     },
     {
       "edge_id": 40,
@@ -1089,9 +1089,9 @@
         "lon": 73.268869
       },
       "road_name": "не указано",
-      "current_travel_time": 1432,
-      "free_travel_time": 1432,
-      "confidence": 1,
+      "current_travel_time": 1568,
+      "free_travel_time": 1401,
+      "confidence": 0.895981,
       "frc": "FRC3",
       "frc_numeric": 3,
       "road_closed": false,
@@ -1099,8 +1099,8 @@
       "osm_name": "Нефтезаводская улица",
       "osm_importance": 6,
       "fitness": 53.25,
-      "current_speed": 46,
-      "free_speed": 46
+      "current_speed": 42,
+      "free_speed": 47
     },
     {
       "edge_id": 41,
@@ -1111,9 +1111,9 @@
         "lon": 73.272906
       },
       "road_name": "не указано",
-      "current_travel_time": 1432,
-      "free_travel_time": 1432,
-      "confidence": 1,
+      "current_travel_time": 1568,
+      "free_travel_time": 1401,
+      "confidence": 0.896453,
       "frc": "FRC3",
       "frc_numeric": 3,
       "road_closed": false,
@@ -1121,8 +1121,8 @@
       "osm_name": "Грозненская улица",
       "osm_importance": 2,
       "fitness": 11.25,
-      "current_speed": 46,
-      "free_speed": 46
+      "current_speed": 42,
+      "free_speed": 47
     },
     {
       "edge_id": 42,
@@ -1133,9 +1133,9 @@
         "lon": 73.270388
       },
       "road_name": "не указано",
-      "current_travel_time": 1432,
-      "free_travel_time": 1432,
-      "confidence": 1,
+      "current_travel_time": 1568,
+      "free_travel_time": 1401,
+      "confidence": 0.896453,
       "frc": "FRC3",
       "frc_numeric": 3,
       "road_closed": false,
@@ -1143,8 +1143,8 @@
       "osm_name": "Нефтезаводская улица",
       "osm_importance": 6,
       "fitness": 53.25,
-      "current_speed": 46,
-      "free_speed": 46
+      "current_speed": 42,
+      "free_speed": 47
     },
     {
       "edge_id": 43,
@@ -1155,9 +1155,9 @@
         "lon": 73.276595
       },
       "road_name": "не указано",
-      "current_travel_time": 1432,
-      "free_travel_time": 1432,
-      "confidence": 1,
+      "current_travel_time": 1568,
+      "free_travel_time": 1401,
+      "confidence": 0.897015,
       "frc": "FRC3",
       "frc_numeric": 3,
       "road_closed": false,
@@ -1165,8 +1165,8 @@
       "osm_name": "улица Малунцева",
       "osm_importance": 2,
       "fitness": 11.25,
-      "current_speed": 46,
-      "free_speed": 46
+      "current_speed": 42,
+      "free_speed": 47
     },
     {
       "edge_id": 44,
@@ -1287,9 +1287,9 @@
         "lon": 73.298522
       },
       "road_name": "не указано",
-      "current_travel_time": 835,
-      "free_travel_time": 653,
-      "confidence": 0.998934,
+      "current_travel_time": 751,
+      "free_travel_time": 613,
+      "confidence": 0.997465,
       "frc": "FRC3",
       "frc_numeric": 3,
       "road_closed": false,
@@ -1297,8 +1297,8 @@
       "osm_name": "мост им. 60-летия ВЛКСМ",
       "osm_importance": 8,
       "fitness": 62.25,
-      "current_speed": 36,
-      "free_speed": 46
+      "current_speed": 40,
+      "free_speed": 49
     },
     {
       "edge_id": 50,
@@ -1353,9 +1353,9 @@
         "lon": 73.324805
       },
       "road_name": "не указано",
-      "current_travel_time": 835,
-      "free_travel_time": 653,
-      "confidence": 0.99926,
+      "current_travel_time": 751,
+      "free_travel_time": 639,
+      "confidence": 0.997477,
       "frc": "FRC3",
       "frc_numeric": 3,
       "road_closed": false,
@@ -1363,8 +1363,8 @@
       "osm_name": "проспект Королёва",
       "osm_importance": 6,
       "fitness": 71.0,
-      "current_speed": 36,
-      "free_speed": 46
+      "current_speed": 40,
+      "free_speed": 47
     },
     {
       "edge_id": 53,
@@ -1375,9 +1375,9 @@
         "lon": 73.332711
       },
       "road_name": "не указано",
-      "current_travel_time": 835,
-      "free_travel_time": 653,
-      "confidence": 0.99926,
+      "current_travel_time": 770,
+      "free_travel_time": 626,
+      "confidence": 0.997472,
       "frc": "FRC3",
       "frc_numeric": 3,
       "road_closed": false,
@@ -1385,8 +1385,8 @@
       "osm_name": "проспект Королёва",
       "osm_importance": 6,
       "fitness": 71.0,
-      "current_speed": 36,
-      "free_speed": 46
+      "current_speed": 39,
+      "free_speed": 48
     },
     {
       "edge_id": 54,
@@ -1397,9 +1397,9 @@
         "lon": 73.338217
       },
       "road_name": "не указано",
-      "current_travel_time": 1647,
+      "current_travel_time": 1568,
       "free_travel_time": 1401,
-      "confidence": 0.882999,
+      "confidence": 0.880268,
       "frc": "FRC3",
       "frc_numeric": 3,
       "road_closed": false,
@@ -1407,7 +1407,7 @@
       "osm_name": "Берёзовая улица",
       "osm_importance": 6,
       "fitness": 35.5,
-      "current_speed": 40,
+      "current_speed": 42,
       "free_speed": 47
     },
     {
@@ -1463,9 +1463,9 @@
         "lon": 73.34049
       },
       "road_name": "не указано",
-      "current_travel_time": 1647,
+      "current_travel_time": 1532,
       "free_travel_time": 1401,
-      "confidence": 0.884497,
+      "confidence": 0.88006,
       "frc": "FRC3",
       "frc_numeric": 3,
       "road_closed": false,
@@ -1473,7 +1473,7 @@
       "osm_name": "Красноярский тракт",
       "osm_importance": 6,
       "fitness": 71.0,
-      "current_speed": 40,
+      "current_speed": 43,
       "free_speed": 47
     },
     {
@@ -1485,9 +1485,9 @@
         "lon": 73.336322
       },
       "road_name": "не указано",
-      "current_travel_time": 812,
-      "free_travel_time": 639,
-      "confidence": 0.999259,
+      "current_travel_time": 751,
+      "free_travel_time": 613,
+      "confidence": 0.99746,
       "frc": "FRC3",
       "frc_numeric": 3,
       "road_closed": false,
@@ -1495,13 +1495,13 @@
       "osm_name": "Без названия",
       "osm_importance": 5,
       "fitness": 16.25,
-      "current_speed": 37,
-      "free_speed": 47
+      "current_speed": 40,
+      "free_speed": 49
     }
   ],
   "metadata": {
-    "created_at": "2026-07-05T17:06:55.278608",
-    "total_osm_requests": 62,
+    "created_at": "2026-07-05T18:47:54.143534",
+    "total_osm_requests": 78,
     "osm_cache_hits": 58,
     "fitness_version": "2.0_improved_with_osm"
   }
