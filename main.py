@@ -67,11 +67,14 @@ def build_node_to_qubit_map(graph):
 
 
 def build_cost_hamiltonian_with_routes(G, routes, node_to_qubit, cycle_time=2):
+
+    half_cycle = cycle_time / 2
+    processed_edges = set()
     coeffs = []
     obs = []
     print("ПОСТРОЕНИЕ УЛУЧШЕННОГО ГАМИЛЬТОНИАНА")
     print("\n1. ШТРАФ ЗА ВРЕМЯ ПРОЕЗДА ПО МАРШРУТАМ")
-    
+
     for route in routes:
         path = route['path']
         priority = route['priority']
@@ -90,16 +93,16 @@ def build_cost_hamiltonian_with_routes(G, routes, node_to_qubit, cycle_time=2):
             qj = node_to_qubit[light_j]
 
             travel_time = G[light_i][light_j]['weight']
-            
+
             # <--- 2. Используем int() вместо round()
             # Нас интересует, в какой по счету полупериод прибывает машина
             half_cycles_int = int(travel_time / half_cycle)
-            
+
             base_weight = (priority * volume * travel_time) / 1000.0
-            
+
             if half_cycles_int % 2 == 0:
                 # Прибытие на четный такт (0, 2, 4...) -> фазы должны совпадать
-                weight = -base_weight 
+                weight = -base_weight
             else:
                 # Прибытие на нечетный такт (1, 3, 5...) -> фазы должны быть противоположны
                 weight = base_weight
@@ -110,11 +113,11 @@ def build_cost_hamiltonian_with_routes(G, routes, node_to_qubit, cycle_time=2):
 
             coeffs.append(weight)
             obs.append(qml.PauliZ(qi) @ qml.PauliZ(qj))
-            
+
             print(f"    Ребро {light_i}→{light_j}: вес = {weight:.3f}")
 
     print("\n2. ШТРАФ ЗА НАКОПЛЕНИЕ ЗАДЕРЖЕК")
-    
+
     for route in routes:
         path = route['path']
         for idx, node in enumerate(path):
@@ -126,9 +129,9 @@ def build_cost_hamiltonian_with_routes(G, routes, node_to_qubit, cycle_time=2):
                 print(f"    Перекресток {node} (позиция {idx+1}): штраф {position_weight:.3f}")
 
     print("\n3. ШТРАФ ЗА НЕПРАВИЛЬНУЮ ФАЗУ НА ВАЖНЫХ ПЕРЕКРЕСТКАХ")
-    
+
     important_nodes = [1, 2, 5, 6, 9]
-    
+
     for node in important_nodes:
         if node in node_to_qubit:
             qi = node_to_qubit[node]
@@ -138,15 +141,15 @@ def build_cost_hamiltonian_with_routes(G, routes, node_to_qubit, cycle_time=2):
             print(f"    Важный перекресток {node}: штраф {weight:.3f}")
 
     print("\n4. ШТРАФ ЗА ВСТРЕЧНЫЕ ПОТОКИ (КРАСНЫЙ-КРАСНЫЙ)")
-    
+
     opposite_edges = [(1, 5), (2, 6), (3, 7), (4, 8)]
-    
+
     for u, v in G.edges():
         qi = node_to_qubit[u]
         qj = node_to_qubit[v]
-        
+
         is_opposite = (u, v) in opposite_edges or (v, u) in opposite_edges
-        
+
         if is_opposite:
             weight = 0.15
             coeffs.append(weight)
@@ -158,7 +161,7 @@ def build_cost_hamiltonian_with_routes(G, routes, node_to_qubit, cycle_time=2):
             obs.append(qml.PauliZ(qi) @ qml.PauliZ(qj))
 
     print("\n5. БАЗОВЫЙ ШТРАФ (все ребра)")
-    
+
     for u, v in G.edges():
         qi = node_to_qubit[u]
         qj = node_to_qubit[v]
