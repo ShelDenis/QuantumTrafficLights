@@ -2,29 +2,51 @@ import pennylane as qml
 from pennylane import numpy as np
 import networkx as nx
 import matplotlib.pyplot as plt  
+from routes_for_quantum import define_routes
+import json
+
+from geopy.distance import geodesic
 
 
 def create_traffic_graph_with_routes(filename):
     G = nx.Graph()
 
-    edges = []
-    all_nodes = set()
+    with open(filename, 'r', encoding='utf-8') as f:
+        data = json.load(f)
 
-    with open(filename, 'rt', encoding='utf-8') as f:
-        for line in f:
-            line = line.strip()
-            if not line:
-                continue
-            parts = line.split()
-            u, v, weight = int(parts[0]), int(parts[1]), float(parts[2])
-            edges.append((u, v, weight))
-            all_nodes.add(u)
-            all_nodes.add(v)
+    routes = define_routes(None)
 
-    G.add_nodes_from(sorted(all_nodes))
+    used_nodes = set()
+    for route in routes:
+        used_nodes.update(route['path'])
 
-    for u, v, weight in edges:
-        G.add_edge(u, v, weight=weight)
+    for node_id in used_nodes:
+        node_info = data['nodes'][str(node_id)]
+        G.add_node(int(node_id), lat=node_info['lat'], lon=node_info['lon'])
+
+    for edge in data['edges']:
+        u = edge['start']
+        v = edge['end']
+
+        if u in used_nodes and v in used_nodes:
+            node_u = data['nodes'][str(u)]
+            node_v = data['nodes'][str(v)]
+
+            dist_km = geodesic(
+                (node_u['lat'], node_u['lon']),
+                (node_v['lat'], node_v['lon'])
+            ).km
+
+            current_speed = edge.get('current_speed', None)
+
+            if current_speed and current_speed > 0:
+                travel_time = (dist_km / current_speed) * 60
+            else:
+                travel_time = (dist_km / 35) * 60
+
+            travel_time = max(0.1, travel_time)
+
+            G.add_edge(u, v, weight=travel_time)
 
     print("Граф загружен:")
     print(f"   Вершин: {len(G.nodes())}")
@@ -32,27 +54,6 @@ def create_traffic_graph_with_routes(filename):
     print(f"   Вершины: {sorted(G.nodes())}")
 
     return G
-
-
-def define_routes(G):
-    routes = [
-        {
-            'source': 1,
-            'destination': 4,
-            'path': [1, 2, 3, 4],
-            'priority': 1.0,
-            'traffic_volume': 100
-        },
-        {
-            'source': 1,
-            'destination': 9,
-            'path': [1, 5, 6, 7, 8, 9],
-            'priority': 0.5,
-            'traffic_volume': 50
-        }
-    ]
-
-    return routes
 
 
 def build_node_to_qubit_map(graph):
@@ -65,7 +66,7 @@ def build_node_to_qubit_map(graph):
     return node_to_qubit, qubit_to_node, all_nodes
 
 
-def build_cost_hamiltonian_with_routes(G, routes, node_to_qubit):
+def build_cost_hamiltonian_with_routes(G, routes, node_to_qubit, cycle_time=2):
     coeffs = []
     obs = []
     print("ПОСТРОЕНИЕ УЛУЧШЕННОГО ГАМИЛЬТОНИАНА")
@@ -82,7 +83,6 @@ def build_cost_hamiltonian_with_routes(G, routes, node_to_qubit):
 
             if not G.has_edge(light_i, light_j):
                 continue
-
             if light_i not in node_to_qubit or light_j not in node_to_qubit:
                 continue
 
@@ -90,7 +90,23 @@ def build_cost_hamiltonian_with_routes(G, routes, node_to_qubit):
             qj = node_to_qubit[light_j]
 
             travel_time = G[light_i][light_j]['weight']
-            weight = (priority * volume * travel_time) / 1000.0
+            
+            # <--- 2. Используем int() вместо round()
+            # Нас интересует, в какой по счету полупериод прибывает машина
+            half_cycles_int = int(travel_time / half_cycle)
+            
+            base_weight = (priority * volume * travel_time) / 1000.0
+            
+            if half_cycles_int % 2 == 0:
+                # Прибытие на четный такт (0, 2, 4...) -> фазы должны совпадать
+                weight = -base_weight 
+            else:
+                # Прибытие на нечетный такт (1, 3, 5...) -> фазы должны быть противоположны
+                weight = base_weight
+
+            # Записываем ребро в множество (отсортированное, чтобы 1-2 и 2-1 были одним ребром)
+            edge_key = tuple(sorted((light_i, light_j)))
+            processed_edges.add(edge_key)
 
             coeffs.append(weight)
             obs.append(qml.PauliZ(qi) @ qml.PauliZ(qj))
@@ -200,11 +216,13 @@ def optimize_traffic_with_routes(graph, routes, depth, initial_gamma, initial_be
     print(f"Количество маршрутов: {len(routes)}")
     print(f"Глубина QAOA: {depth}\n")
 
-    dev = qml.device("default.qubit", wires=num_qubits, shots=1000)
+        # Используем lightning.qubit - он написан на C++ и быстрее
+    dev = qml.device("lightning.qubit", wires=num_qubits)
 
     H = build_cost_hamiltonian_with_routes(graph, routes, node_to_qubit)
 
-    @qml.qnode(dev)
+    # Добавляем diff_method="adjoint" - это спасет память!
+    @qml.qnode(dev, diff_method="adjoint")
     def qaoa_circuit(gamma, beta):
         for i in range(num_qubits):
             qml.Hadamard(wires=i)
@@ -224,7 +242,18 @@ def optimize_traffic_with_routes(graph, routes, depth, initial_gamma, initial_be
     init_params = np.concatenate([initial_gamma, initial_beta])
     init_params = np.array(init_params, requires_grad=True)
 
-    opt = qml.GradientDescentOptimizer(stepsize=0.1)
+    # opt = qml.GradientDescentOptimizer(stepsize=0.1)
+    # opt = qml.AdamOptimizer()
+    # Adam справился неплохо - первый маршрут вместо 8 минут, проехал за 7,
+    # но 2-й на минуту больше
+    # opt = qml.AdagradOptimizer()
+    # Adagrad проехал 2-й маршрут так же как и Adam, но 1-й - за 8 минут.
+    # Медленно скатывался в оптимум
+    opt = qml.NesterovMomentumOptimizer()
+    # Нашел самое маленькое значение целевой функции, но результаты как у Adam
+    # Я бы пока оставил его)
+
+
     params = init_params
 
     print("Запуск оптимизации")  
@@ -354,14 +383,17 @@ def compare_results(G, routes, phase_offsets):
 
 
 if __name__ == "__main__":
-    G = create_traffic_graph_with_routes('examples/very_simple.txt')
+    G = create_traffic_graph_with_routes('traffic_graph_final.json')
 
     routes = define_routes(G)
 
     num_phases = 2
-    depth = 2
-    initial_gamma = [0.5, 0.3]
-    initial_beta = [0.2, 0.4]
+    depth = 4
+    initial_gamma = [0.5, 0.3, 0.2, 0.1]
+    initial_beta = [0.2, 0.4, 0.3, 0.2]
+    # увеличил глубину алгоритма - выполняется дольше,
+    # результат не поменялся (т.к. пример простой),
+    # но для большего числа светофоров - должно быть лучше
 
     phase_offsets, cost, opt_gamma, opt_beta = optimize_traffic_with_routes(
         graph=G,
