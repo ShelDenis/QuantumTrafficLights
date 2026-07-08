@@ -412,4 +412,4 @@ if __name__ == "__main__":
         time, wait = evaluate_route(G, route, phase_offsets)
         print(f"Общее время маршрута: {time:.1f} мин (ожидание: {wait:.1f} мин)")
     
-    compare_results(G, routes, phase_offsets)
+    # compare_results(G, routes, phase_offsets)
